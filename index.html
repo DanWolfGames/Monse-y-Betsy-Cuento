@@ -24,70 +24,19 @@
       <p>➺</p>
     </div>
     <!-- Páginas -->
-    
-    <div class="page">
-      <div class="overlay">
-        <img src="images/page1.jpg" alt="" />
-        <p>página 1 ➺</p>
-      </div>
-    </div>
-
-    <div class="page">
-      <div class="overlay">
-        <img src="images/page2.jpg" alt="" />
-        <p>página 2 ➺</p>
-      </div>
-    </div>
-
-    <div class="page">
-      <div class="overlay">
-        <img src="images/page3.jpg" alt="" />
-        <p>página 3 ➺</p>
-      </div>
-    </div>
-
-    <div class="page">
-      <div class="overlay">
-        <img src="images/page4.jpg" alt="" />
-        <p>página 4 ➺</p>
-      </div>
-    </div>
-
-    <div class="page">
-      <div class="overlay">
-        <img src="images/page5.jpg" alt="" />
-        <p>página 5 ➺</p>
-      </div>
-    </div>
-
-    <div class="page">
-      <div class="overlay">
-        <img src="images/page6.jpg" alt="" />
-        <p>página 6 ➺</p>
-      </div>
-    </div>
-
-    <div class="page">
-      <div class="overlay">
-        <img src="images/page7.jpg" alt="" />
-        <p>página 7 ➺</p>
-      </div>
-    </div>
-
-    <div class="page">
-      <div class="overlay">
-        <img src="images/page8.jpg" alt="" />
-        <p>página 8 ➺</p>
-      </div>
-    </div>
+    <div class="page"><div class="overlay"><img src="images/page1.jpg" alt="" /><p>página 1 ➺</p></div></div>
+    <div class="page"><div class="overlay"><img src="images/page2.jpg" alt="" /><p>página 2 ➺</p></div></div>
+    <div class="page"><div class="overlay"><img src="images/page3.jpg" alt="" /><p>página 3 ➺</p></div></div>
+    <div class="page"><div class="overlay"><img src="images/page4.jpg" alt="" /><p>página 4 ➺</p></div></div>
+    <div class="page"><div class="overlay"><img src="images/page5.jpg" alt="" /><p>página 5 ➺</p></div></div>
+    <div class="page"><div class="overlay"><img src="images/page6.jpg" alt="" /><p>página 6 ➺</p></div></div>
+    <div class="page"><div class="overlay"><img src="images/page7.jpg" alt="" /><p>página 7 ➺</p></div></div>
+    <div class="page"><div class="overlay"><img src="images/page8.jpg" alt="" /><p>página 8 ➺</p></div></div>
     <div class="hard"></div>
-    <div class="hard">Gracias <small>~ Danilo Arias</small> <p>➺</p> </div>
+    <div class="hard">Gracias <small>~ Danilo Arias</small><p>➺</p></div>
     <div class="hard">
       <img src="images/backcover.jpg" alt="Contraportada" />
-      <div class="hard-text">
-        Danilo Arias <br />
-        <small>~ Escrito por</small>
-      </div>
+      <div class="hard-text">Danilo Arias <br /><small>~ Escrito por</small></div>
     </div>
   </div>
 
@@ -95,6 +44,7 @@
   <script src="turn.js"></script>
   <script>
     $(".flipbook").turn();
+
     document.getElementById('fullscreen-btn').addEventListener('click', () => {
       const elem = document.documentElement;
       if (!document.fullscreenElement) {
@@ -103,6 +53,14 @@
         });
       } else {
         document.exitFullscreen();
+      }
+    });
+
+    let lastOrientation = window.innerWidth > window.innerHeight ? 'landscape' : 'portrait';
+    window.addEventListener('resize', () => {
+      const currentOrientation = window.innerWidth > window.innerHeight ? 'landscape' : 'portrait';
+      if (currentOrientation !== lastOrientation) {
+        location.reload();
       }
     });
   </script>
