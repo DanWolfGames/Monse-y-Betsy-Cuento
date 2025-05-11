@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 10px;
+  background: #000000;
+  overflow: auto;
+}
+
+.flipbook {
+  width: 90vw;
+  height: calc(90vw * 0.35);
+  max-width: 2000px;
+  max-height: 700px;
+}
+
+.flipbook .hard {
+  background: #553c3f !important;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.flipbook .hard small {
+  font-style: italic;
+  font-weight: lighter;
+  opacity: 0.8;
+  font-size: 14px;
+}
+
+.page {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.overlay img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay p {
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 13px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.flipbook .hard img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hard-text {
+  position: absolute;
+  bottom: 10px;
+  left: 140px;
+  color: #f8b76a;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
+  z-index: 10;
+}
+
+.hard-text small {
+  display: block;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+#fullscreen-btn {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 9999;
+  background: #f8b76a;
+  color: #000;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  transition: background 0.3s;
+}
+
+#fullscreen-btn:hover {
+  background: #ffaa3b;
+}
